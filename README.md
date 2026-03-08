@@ -1,82 +1,82 @@
-# YouTube ETL Analysis
+# Analisis ETL de Historial de YouTube
 
-This project implements an ETL pipeline to analyze YouTube watch history data exported from Google Takeout.
+Este proyecto implementa un pipeline ETL para analizar el historial de reproducciones de YouTube exportado desde Google Takeout.
 
-## Project Overview
+## Descripcion General
 
-The pipeline extracts, transforms, analyzes, and exports YouTube watch history data to better understand viewing behavior.
+El pipeline permite extraer, transformar, analizar y guardar datos del historial de reproducciones para identificar patrones de consumo.
 
-Main goals:
+Objetivos principales:
 
-- Clean and process raw JSON data
-- Extract useful metrics from watch history
-- Analyze viewing patterns by channel and time
-- Generate visualizations from processed data
+- Limpiar y procesar datos en formato JSON
+- Extraer metricas utiles del historial de reproduccion
+- Analizar habitos de visualizacion por canal y por horario
+- Generar graficos a partir de los datos procesados
 
-## Tech Stack
+## Tecnologias Utilizadas
 
 - Python
 - Pandas
 - Matplotlib
 
-## Project Structure
+## Estructura del Proyecto
 
 ```text
 data/
-  raw/                # original dataset
-  processed/          # cleaned data and generated charts
+  raw/                # datos originales
+  processed/          # datos limpios y graficos generados
 
 src/
-  extract.py          # data extraction
-  transform.py        # data cleaning and feature engineering
-  analytics.py        # metrics and aggregations
-  visualizacion.py    # chart generation
-  load.py             # export processed data
-  main.py             # pipeline execution
+  extract.py          # extraccion de datos
+  transform.py        # limpieza y transformacion de datos
+  analytics.py        # metricas y agregaciones
+  visualizacion.py    # generacion de graficos
+  load.py             # exportacion del archivo procesado
+  main.py             # ejecucion del pipeline
 ```
 
-## Metrics Analyzed
+## Metricas Analizadas
 
-- Top artists / channels watched
-- Viewing distribution by hour
-- Viewing distribution by period of day
+- Top de artistas o canales mas vistos
+- Distribucion de reproducciones por hora
+- Distribucion de reproducciones por periodo del dia
 
-## Generated Visualizations
+## Visualizaciones Generadas
 
-The pipeline generates the following files in `data/processed/`:
+El pipeline genera los siguientes archivos en `data/processed/`:
 
 - `top_artists.png`
 - `hour_distribution.png`
 - `period_distribution.png`
 
-## How to Run
+## Como Ejecutarlo
 
-Install dependencies:
+Instalar dependencias:
 
 ```bash
 python -m pip install pandas matplotlib
 ```
 
-Run the pipeline:
+Ejecutar el pipeline:
 
 ```bash
 python src/main.py
 ```
 
-If your Windows terminal shows encoding issues with emojis, run:
+Si en Windows aparece un problema de codificacion por emojis en la terminal, ejecuta:
 
 ```powershell
 $env:PYTHONUTF8='1'; python src/main.py
 ```
 
-## Output
+## Resultados Generados
 
-The pipeline produces:
+El pipeline produce:
 
-- A cleaned dataset: `data/processed/youtube_limpio.csv`
-- Charts for top artists, hourly activity, and period-based activity
+- Un archivo limpio en CSV: `data/processed/youtube_limpio.csv`
+- Graficos sobre artistas mas vistos, actividad por hora y actividad por periodo del dia
 
-## Notes
+## Consideraciones
 
-- The raw input file is expected at `data/raw/historial-de-reproducciones.json`
-- The charts and processed CSV are saved automatically in `data/processed/`
+- El archivo de entrada debe estar en `data/raw/historial-de-reproducciones.json`
+- Los graficos y el CSV procesado se guardan automaticamente en `data/processed/`
