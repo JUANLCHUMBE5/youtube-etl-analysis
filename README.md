@@ -21,19 +21,16 @@ Objetivos principales:
 
 ## Estructura del Proyecto
 
-```text
-data/
-  raw/                # datos originales
-  processed/          # datos limpios y graficos generados
-
-src/
-  extract.py          # extraccion de datos
-  transform.py        # limpieza y transformacion de datos
-  analytics.py        # metricas y agregaciones
-  visualizacion.py    # generacion de graficos
-  load.py             # exportacion del archivo procesado
-  main.py             # ejecucion del pipeline
-```
+- [data](data): carpeta principal de datos
+- [data/raw](data/raw): datos originales
+- [data/processed](data/processed): datos limpios y graficos generados
+- [src](src): codigo fuente del proyecto
+- [src/extract.py](src/extract.py): extraccion de datos
+- [src/transform.py](src/transform.py): limpieza y transformacion de datos
+- [src/analytics.py](src/analytics.py): metricas y agregaciones
+- [src/visualizacion.py](src/visualizacion.py): generacion de graficos
+- [src/load.py](src/load.py): exportacion del archivo procesado
+- [src/main.py](src/main.py): ejecucion del pipeline
 
 ## Metricas Analizadas
 
